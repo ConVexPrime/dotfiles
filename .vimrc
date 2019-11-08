@@ -3,25 +3,28 @@ set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
 
 " vundle packages :BundleInstall to install packages
+" ==================================================
+
+" Main Vundle package
 Bundle 'gmarik/vundle'
-Bundle 'ervandew/supertab'
+" Improved javascript syntax highlighting and indentation
 Bundle 'pangloss/vim-javascript'
-Bundle 'ctrlp.vim'
-Bundle 'matchit.zip'
+" Better commenting 'gcc' comments an entire line
 Bundle 'tComment'
-Bundle 'tristen/vim-sparkup'
-Bundle 'plasticboy/vim-markdown'
+" Slim syntax highlighting
 Bundle 'slim-template/vim-slim'
-Bundle 'jiangmiao/simple-javascript-indenter'
-Bundle 'mxw/vim-jsx'
+" Pretty JSX syntax highlighting
+Bundle 'maxmellon/vim-jsx-pretty'
+" HTML5 omnicomplete function, indent, and sytax
 Bundle 'othree/html5.vim'
+" One stop shop for color schemes.  :colorscheme wombat, molokai
 Bundle 'flazz/vim-colorschemes'
+" Change the cursor when entering insert mode
 Bundle 'jszakmeister/vim-togglecursor'
+" Status line at the bottom of each window
 Bundle 'vim-airline/vim-airline'
+" Shows a git diff in the gutter
 Bundle 'airblade/vim-gitgutter'
-Bundle 'rking/ag.vim'
-Bundle 'Chun-Yang/vim-action-ag'
-Bundle 'w0rp/ale'
 
 " take in an extra file from the local directory if necessary
 if filereadable(glob(".vimrc.local"))
@@ -32,9 +35,10 @@ endif
 filetype plugin indent on
 syntax on
 cabbr te tabedit
-colorscheme xoria256
+" colorscheme xoria256
 " colorscheme solarized
-" set background=dark
+colorscheme molokai
+set background=dark
 set expandtab
 set nocompatible
 set laststatus=2
