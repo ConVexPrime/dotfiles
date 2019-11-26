@@ -9,22 +9,20 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 " Improved javascript syntax highlighting and indentation
 Bundle 'pangloss/vim-javascript'
-" Better commenting 'gcc' comments an entire line
-Bundle 'tComment'
-" Slim syntax highlighting
-Bundle 'slim-template/vim-slim'
-" Pretty JSX syntax highlighting
-Bundle 'maxmellon/vim-jsx-pretty'
-" HTML5 omnicomplete function, indent, and sytax
-Bundle 'othree/html5.vim'
 " One stop shop for color schemes.  :colorscheme wombat, molokai
 Bundle 'flazz/vim-colorschemes'
 " Change the cursor when entering insert mode
 Bundle 'jszakmeister/vim-togglecursor'
 " Status line at the bottom of each window
 Bundle 'vim-airline/vim-airline'
-" Shows a git diff in the gutter
-Bundle 'airblade/vim-gitgutter'
+" Autocomplete quotes, brackets, etc.
+Bundle 'tpope/vim-surround'
+" Interactive file tree in a side panel
+Bundle 'scrooloose/nerdtree'
+" Map ctrl-o to open nerdtree
+map <C-o> :NERDTreeToggle<CR>
+" Snippets
+Bundle 'SirVer/ultisnips'
 
 " take in an extra file from the local directory if necessary
 if filereadable(glob(".vimrc.local"))
@@ -67,3 +65,14 @@ map <Leader>f gagiw
 
 " set nonumber
 highlight Normal ctermbg=None
+
+"Better split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+"Ultisnips trigger configuration
+let g:UltiSnipsExpandTrigger="<tab>"
+"Let's Ultisnips split window, and sets direction
+let g:UltiSnipsEditSplit="vertical"
